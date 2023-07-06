@@ -3,48 +3,59 @@
 "title": "Serenity Summary Report",
 "tagCategoryTitle": "Category",
 "version": "",
-"date": "2023-05-04T23:55:47.717908600"
+"date": "2023-07-06T19:20:18.358004200"
 },
 "results": {
 "counts": {
-"total": 2,
+"total": 3,
 "success": 2,
 "pending": 0,
 "ignored": 0,
 "skipped": 0,
 "aborted": 0,
 "failure": 0,
-"error": 0,
+"error": 1,
 "compromised": 0
 },
 "percentages": {
-"success": 100,
+"success": 67,
 "pending": 0,
 "ignored": 0,
 "skipped": 0,
 "aborted": 0,
 "failure": 0,
-"error": 0,
+"error": 33,
 "compromised": 0
 },
-"totalTestDuration": 90276,
-"totalClockDuration": 90915,
-"minTestDuration": 30466,
-"maxTestDuration": 59810,
-"averageTestDuration": 45138
+"totalTestDuration": 73549,
+"totalClockDuration": 73601,
+"minTestDuration": 14608,
+"maxTestDuration": 36680,
+"averageTestDuration": 22962
 },
 "resultsByFeature": [
   {
-  "featureName": "Search by keyword",
+  "featureName": "Login into facebook",
   "scenarios": [
     {
-    "title": "Searching for a term",
-    "result": "success",
+    "title": "1: Invalid Scenario ( [1]",
+    "result": "error",
       "outcomes": [
         {
         "result": "success",
-        "description": "",
+        "description": "1: Invalid Scenario ({Note=invalid email, email=manthagrfgns@gmail.com, password=abc@123, Error Message=The email address you entered isn't connected to an account. Find your account and log in.})",
         "errorMessage": ""
+        }
+      ]
+    },
+    {
+    "title": "2: Invalid Scenario ( [2]",
+    "result": "error",
+      "outcomes": [
+        {
+        "result": "error",
+        "description": "2: Invalid Scenario ({Note=invalid password, email=neema.manthan@gmail.com, password=fvgsfgdhfjgj, Error Message=The password that you've entered is incorrect. Forgotten password?})",
+        "errorMessage": "No such element exception: Timed out after 2 seconds. Element not found"
         }
       ]
     }
@@ -68,20 +79,54 @@
   }
 ],
 "frequentFailures": [
+  {
+  "name": "No such element exception",
+  "count": 1
+  }
 ],
 "unstableFeatures": [
+  {
+  "name": "Login into facebook",
+  "failurePercentage": 50
+  }
 ],
 "coverage": [
   {
   "tagTitle": "Capability",
   "tagCoverages": [
     {
-    "tagName": "Search",
+    "tagName": "Login",
     "testCount": 2,
+    "successRate": "50%",
+    "counts": {
+    "total": 3,
+    "success": 1,
+    "pending": 0,
+    "ignored": 0,
+    "skipped": 0,
+    "aborted": 0,
+    "failure": 0,
+    "error": 1,
+    "compromised": 0
+    },
+    "percentages": {
+    "success": 50,
+    "pending": 0,
+    "ignored": 0,
+    "skipped": 0,
+    "aborted": 0,
+    "failure": 0,
+    "error": 50,
+    "compromised": 0
+    }
+    },
+    {
+    "tagName": "Search",
+    "testCount": 1,
     "successRate": "100%",
     "counts": {
-    "total": 2,
-    "success": 2,
+    "total": 3,
+    "success": 1,
     "pending": 0,
     "ignored": 0,
     "skipped": 0,
@@ -107,28 +152,28 @@
   "tagTitle": "Feature",
   "tagCoverages": [
     {
-    "tagName": "Search by keyword",
-    "testCount": 1,
-    "successRate": "100%",
+    "tagName": "Login into facebook",
+    "testCount": 2,
+    "successRate": "50%",
     "counts": {
-    "total": 2,
+    "total": 3,
     "success": 1,
     "pending": 0,
     "ignored": 0,
     "skipped": 0,
     "aborted": 0,
     "failure": 0,
-    "error": 0,
+    "error": 1,
     "compromised": 0
     },
     "percentages": {
-    "success": 100,
+    "success": 50,
     "pending": 0,
     "ignored": 0,
     "skipped": 0,
     "aborted": 0,
     "failure": 0,
-    "error": 0,
+    "error": 50,
     "compromised": 0
     }
     },
@@ -137,7 +182,7 @@
     "testCount": 1,
     "successRate": "100%",
     "counts": {
-    "total": 2,
+    "total": 3,
     "success": 1,
     "pending": 0,
     "ignored": 0,
@@ -166,10 +211,6 @@
   "tagType": "",
   "tagResults": [
     {
-    "tagName": "Search_By_Manthan",
-    "count": 1
-    },
-    {
     "tagName": "search",
     "count": 1
     }
@@ -180,15 +221,15 @@
   "tagResults": [
     {
     "tagName": "Chrome",
-    "count": 2
+    "count": 3
     },
     {
     "tagName": "Windows",
-    "count": 2
+    "count": 3
     },
     {
     "tagName": "Chrome, Windows",
-    "count": 2
+    "count": 3
     }
   ]
   }
